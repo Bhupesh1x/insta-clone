@@ -3,7 +3,6 @@ import Navbar from "../Component/Navbar";
 import "./Home.css";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
-import ShareIcon from "@material-ui/icons/Share";
 import SendIcon from "@material-ui/icons/Send";
 import DeleteIcon from "@material-ui/icons/Delete";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
@@ -17,13 +16,13 @@ toast.configure();
 
 function Home() {
   const access_token = JSON.parse(window.localStorage.getItem("jwt"));
-  const [user, setUser] = useContext(DataContext);
+  const [user] = useContext(DataContext);
   const [data, setData] = useState([]);
   const [text, setText] = useState([]);
   const [viewComments, setViewComments] = useState(false);
 
   useEffect(() => {
-    fetch("/allpost", {
+    fetch("https://myinstaclonebackend.herokuapp.com/allpost", {
       headers: {
         Authorization: `Bearer ${access_token}`,
       },
@@ -36,7 +35,7 @@ function Home() {
   }, []);
 
   const likePost = (id) => {
-    fetch("/like", {
+    fetch("https://myinstaclonebackend.herokuapp.com/like", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -63,7 +62,7 @@ function Home() {
       });
   };
   const unlikePost = (id) => {
-    fetch("/unlike", {
+    fetch("https://myinstaclonebackend.herokuapp.com/unlike", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -91,7 +90,7 @@ function Home() {
   };
 
   const makeComment = (text, postId) => {
-    fetch("/comment", {
+    fetch("https://myinstaclonebackend.herokuapp.com/comment", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -124,7 +123,7 @@ function Home() {
     setViewComments(!viewComments);
   }
   const deletePost = (postid) => {
-    fetch(`/deletepost/${postid}`, {
+    fetch(`https://myinstaclonebackend.herokuapp.com/deletepost/${postid}`, {
       method: "delete",
       headers: {
         Authorization: `Bearer ${access_token}`,

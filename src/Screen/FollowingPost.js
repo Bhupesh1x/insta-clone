@@ -22,7 +22,7 @@ function Home() {
   const [viewComments, setViewComments] = useState(false);
 
   useEffect(() => {
-    fetch("/getsubpost", {
+    fetch("https://myinstaclonebackend.herokuapp.com/getsubpost", {
       headers: {
         Authorization: `Bearer ${access_token}`,
       },
@@ -35,7 +35,7 @@ function Home() {
   }, []);
 
   const likePost = (id) => {
-    fetch("/like", {
+    fetch("https://myinstaclonebackend.herokuapp.com/like", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -62,7 +62,7 @@ function Home() {
       });
   };
   const unlikePost = (id) => {
-    fetch("/unlike", {
+    fetch("https://myinstaclonebackend.herokuapp.com/unlike", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -90,7 +90,7 @@ function Home() {
   };
 
   const makeComment = (text, postId) => {
-    fetch("/comment", {
+    fetch("https://myinstaclonebackend.herokuapp.com/comment", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -123,7 +123,7 @@ function Home() {
     setViewComments(!viewComments);
   }
   const deletePost = (postid) => {
-    fetch(`/deletepost/${postid}`, {
+    fetch(`https://myinstaclonebackend.herokuapp.com/deletepost/${postid}`, {
       method: "delete",
       headers: {
         Authorization: `Bearer ${access_token}`,

@@ -19,7 +19,7 @@ function Profile() {
   }, []);
 
   const getProfile = () => {
-    fetch(`/user/${userid}`, {
+    fetch(`https://myinstaclonebackend.herokuapp.com/user/${userid}`, {
       headers: {
         Authorization: `Bearer ${access_token}`,
       },
@@ -33,7 +33,7 @@ function Profile() {
   };
 
   const followUser = () => {
-    fetch("/follow", {
+    fetch("https://myinstaclonebackend.herokuapp.com/follow", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -54,7 +54,7 @@ function Profile() {
   };
 
   const unfollowUser = () => {
-    fetch("/unfollow", {
+    fetch("https://myinstaclonebackend.herokuapp.com/unfollow", {
       method: "put",
       headers: {
         "Content-Type": "application/json",

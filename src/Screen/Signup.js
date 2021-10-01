@@ -63,14 +63,17 @@ function Signup() {
     if (email === "" || password === "" || name === "") {
       toast.error("Please Check All The Required Fields");
     } else {
-      var result = await fetch("/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(apiData),
-      });
+      var result = await fetch(
+        "https://myinstaclonebackend.herokuapp.com/signup",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(apiData),
+        }
+      );
       result = await result.json();
       console.log(result);
       if (result.error) {

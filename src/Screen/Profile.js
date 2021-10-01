@@ -19,7 +19,9 @@ function Profile() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await authAxios.get("/mypost");
+        const result = await authAxios.get(
+          "https://myinstaclonebackend.herokuapp.com/mypost"
+        );
         setMyPosts(result.data.myposts);
       } catch (err) {
         console.log(err.message);

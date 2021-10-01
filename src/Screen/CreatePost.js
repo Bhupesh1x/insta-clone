@@ -44,15 +44,18 @@ function CreatePost() {
     if (url === "" || description === "") {
       toast.error("Please Check All The Required Fields");
     } else {
-      var result = await fetch("/createpost", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          Authorization: `Bearer ${access_token}`,
-        },
-        body: JSON.stringify(apiData),
-      });
+      var result = await fetch(
+        "https://myinstaclonebackend.herokuapp.com/createpost",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+            Authorization: `Bearer ${access_token}`,
+          },
+          body: JSON.stringify(apiData),
+        }
+      );
       result = await result.json();
       console.log(result);
       if (result.error) {

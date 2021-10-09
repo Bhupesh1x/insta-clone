@@ -54,9 +54,11 @@ function Signin() {
   }
 
   return (
-    <div>
-      <Navbar />
-      <div className="signup">
+    <div className="signin">
+      <div className="signup__navbar">
+        <Navbar />
+      </div>
+      <div className="signup__body">
         <div className="signup__card">
           <img
             src="https://cdn.icon-icons.com/icons2/2699/PNG/512/instagram_logo_icon_170643.png"

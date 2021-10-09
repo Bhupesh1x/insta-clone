@@ -1,9 +1,8 @@
-.signup {
-  background-color: whitesmoke;
-  height: 43vw;
+.signup__body {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 87vh;
 }
 .signup__data {
   color: #8e8e8e;
@@ -16,6 +15,7 @@
 .signup__card {
   background-color: white;
   max-width: 510px;
+  max-height: 510px;
   border: 1px solid #dbdbdb;
   border-radius: 1px;
   margin: 0 0 10px;
@@ -27,6 +27,21 @@
   width: 210px;
   margin: 0px auto;
 }
+.signup__button {
+  width: 60%;
+  margin: 10px 20px;
+  outline: none;
+  height: 7vh;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: #75c8ff;
+  margin-bottom: 40px;
+}
+.signup__button:focus {
+  outline: none;
+}
+
+/* sign-in css */
 .signin__logo {
   object-fit: contain;
   width: 210px;
@@ -36,7 +51,7 @@
 .auth-destination-input {
   margin-bottom: 10px;
   width: 60%;
-  margin: 10px 20px;
+  margin: 8px 20px;
   background-clip: padding-box;
   border: 1px solid rgb(211, 210, 210);
   border-radius: 0.25rem;
@@ -57,21 +72,9 @@
   border: 1px solid #3a57e8;
 }
 .input__margins {
-  margin-top: 50px;
+  margin-top: 20px;
 }
-.signup__button {
-  width: 60%;
-  margin: 10px 20px;
-  outline: none;
-  height: 7vh;
-  padding: 0.5rem 1rem;
-  color: #fff;
-  background-color: #75c8ff;
-  margin-bottom: 40px;
-}
-.signup__button:focus {
-  outline: none;
-}
+
 .signin__button:focus {
   outline: none;
 }

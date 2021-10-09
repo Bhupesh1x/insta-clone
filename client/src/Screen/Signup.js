@@ -86,9 +86,11 @@ function Signup() {
   }
 
   return (
-    <div>
-      <Navbar />
-      <div className="signup">
+    <div className="signup">
+      <div className="signup__navbar">
+        <Navbar />
+      </div>
+      <div className="signup__body">
         <div className="signup__card">
           <img
             src="https://cdn.icon-icons.com/icons2/2699/PNG/512/instagram_logo_icon_170643.png"
@@ -107,6 +109,13 @@ function Signup() {
             required
           />
           <input
+            type="file"
+            className="auth-destination-input w-full"
+            placeholder="Upload Image"
+            onChange={(e) => changeImageHandler(e)}
+            required
+          />
+          <input
             type="text"
             className="auth-destination-input w-full  "
             placeholder="Enter Your Email Here"
@@ -118,13 +127,6 @@ function Signup() {
             className="auth-destination-input w-full  "
             placeholder="Enter Your password Here"
             onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <input
-            type="file"
-            className="auth-destination-input w-full"
-            placeholder="Upload Image"
-            onChange={(e) => changeImageHandler(e)}
             required
           />
           <button className="signup__button" onClick={signup}>

@@ -1,14 +1,19 @@
 .navbar {
-  height: 10vh;
-  padding: 7px 4%;
+  height: 11vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid lightgray;
-  background-color: whitesmoke;
+  padding: 0px 140px;
+  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.8);
+  background: #fff;
   position: sticky;
   z-index: 55;
   top: 0;
+  color: black;
+}
+.navbar__Right {
+  display: flex;
+  align-items: center;
 }
 .navbar__logo {
   object-fit: contain;
@@ -17,7 +22,7 @@
 .navbar__rightSign {
   display: flex;
   align-items: center;
-  width: 30%;
+  width: 50%;
   padding-left: 15%;
 }
 .navbar__right {

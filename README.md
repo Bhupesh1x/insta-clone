@@ -25,5 +25,3 @@ InstaGram clone with **MERN Stack**.
 6. Also User can post the posts by going to createpost tab through navbar and user has to give the title and image he want to post.
 7. User can also see his profile by navigating to the profile tab.
 8. User can also see his following post by navigating to the myfollowingpost tab throung navbar.
-
-<img src="./Peek 2021-10-07 19-37.gif">
